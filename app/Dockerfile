@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y libpq-dev build-essential
 
 # Copy only the requirements file, to cache the pip install step if no changes to requirements.txt
-COPY requirements.txt .
+COPY ./app/requirements.txt .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt

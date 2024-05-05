@@ -31,12 +31,12 @@ jobs:
           context: .
           file: ./app/Dockerfile
           push: ${{ github.event_name == 'push' }}
-          tags: yourusername/yourrepository:latest
+          tags: ananthu10/chuck_norris_jokes:latest
 
       - name: Run image locally (For PR testing purposes)
         if: github.event_name == 'pull_request'
         run: |
-          docker run --name test-container -d -p 5000:5000 yourusername/yourrepository:latest
+          docker run --name test-container -d -p 5000:5000 ananthu10/chuck_norris_jokes:latest
           sleep 10
           docker logs test-container
           docker stop test-container

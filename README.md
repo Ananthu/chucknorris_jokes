@@ -26,7 +26,7 @@ docker pull ananthu10/chuck_norris_jokes
 Run the app using the following commands:
 
 ```bash
-docker run -d -p 5000:5000 yananthu10/chuck_norris_jokes:latest
+docker run -d -p 5000:5000 ananthu10/chuck_norris_jokes:latest
 ```
 
 
